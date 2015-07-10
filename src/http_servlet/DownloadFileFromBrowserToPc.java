@@ -143,8 +143,7 @@ class ResponseBlock {
 
 	public void saveFile(byte[] repository, String direction) {
 		if (!nameBlock.equals("NO_FILE")) {
-			try (FileOutputStream fileOutputStream = new FileOutputStream(new File(direction
-					+ nameBlock))) {
+			try (FileOutputStream fileOutputStream = new FileOutputStream(new File(direction + nameBlock))) {
 				fileOutputStream.write(repository, startIndex, endIndex - startIndex);
 			} catch (Exception e) {
 				System.out.println(e.toString());
